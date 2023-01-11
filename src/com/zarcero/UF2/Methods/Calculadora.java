@@ -21,19 +21,27 @@ public class Calculadora {
                     resultat = suma(valor1, valor2);
                     System.out.println("El resultat de la suma és: " + resultat);
                     break;
-                case 2: // TODO: resta
+                case 2:
+                    resultat = resta(valor1, valor2);
+                    System.out.println("El resultat de la resta és: " + resultat);
                     break;
-                case 3: // TODO: multiplicació
+                case 3:
+                    resultat = multiplicacio(valor1, valor2);
+                    System.out.println("El resultat de la multiplicació és: " + resultat);
                     break;
-                case 4: // TODO: divisió
+                case 4:
+                    resultat = divisio(valor1, valor2);
+                    System.out.println("El resultat de la divisió és: " + resultat);
                     break;
-                case 5: // TODO: exponencial (opcional)
+                case 5:
+                    resultat = exponencial(valor1, valor2);
+                    System.out.println("El resultat de la exponencial és: " + resultat);
                     System.out.println("En construcció");
                     break;
                 case 6:
                     System.out.println("Sortint... ");
                     break;
-                default: // TODO: Desenvolupar default
+                default:
                     System.out.println("Opció no vàlida");
                     break;
             }
@@ -94,5 +102,30 @@ public class Calculadora {
     public static float suma (float x, float y){
         float suma = x + y;
         return suma;
+    }
+
+    public static float resta (float x, float y){
+        float resta = x - y;
+        return resta;
+    }
+
+    public static float multiplicacio (float x, float y){
+        float multiplicacio = x * y;
+        return multiplicacio;
+    }
+
+    public static float divisio (float x, float y) {
+        float divisio = x / y;
+        return divisio;
+    }
+
+    public static float exponencial (float x, float y) {
+        float exponencial = 0;
+
+        for (int i = 0; i < y; i++) {
+            exponencial = x * x;
+        }
+
+        return exponencial;
     }
 }
