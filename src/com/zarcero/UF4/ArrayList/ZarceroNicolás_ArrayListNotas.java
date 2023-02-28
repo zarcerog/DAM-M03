@@ -11,6 +11,9 @@ public class ZarceroNicolás_ArrayListNotas {
         start();
     }
 
+    /**
+     * Método que inicia el programa
+     */
     private static void start() {
         int option = 0;
 
@@ -46,23 +49,39 @@ public class ZarceroNicolás_ArrayListNotas {
         } while (option != 6);
     }
 
+    /**
+     * Método que añade una nota
+     * @param grades ArrayList de notas
+     */
     private static void addGrade(ArrayList<Float> grades) {
         float grade = isFloat("Introduce la nota: ", 0, 10);
         grades.add(grade);
     }
 
+    /**
+     * Método que consulta una nota
+     * @param grades ArrayList de notas
+     */
     private static void consultGrade(ArrayList<Float> grades) {
         System.out.println("Tienes " + grades.size() + " notas");
         int position = isInt("Introduce la posición de la nota: ", 1, grades.size());
         System.out.println("La nota es: " + grades.get(position - 1));
     }
 
+    /**
+     * Método que elimina una nota
+     * @param grades ArrayList de notas
+     */
     private static void deleteGrade(ArrayList<Float> grades) {
         System.out.println("Tienes " + grades.size() + " notas");
         int position = isInt("Introduce la posición de la nota: ", 1, grades.size());
         grades.remove(position - 1);
     }
 
+    /**
+     * Método que modifica una nota
+     * @param grades ArrayList de notas
+     */
     private static void modifyGrade(ArrayList<Float> grades) {
         System.out.println("Tienes " + grades.size() + " notas");
         int position = isInt("Introduce la posición de la nota: ", 1, grades.size());
@@ -70,12 +89,23 @@ public class ZarceroNicolás_ArrayListNotas {
         grades.set(position - 1, grade);
     }
 
+    /**
+     * Método que consulta todas las notas
+     * @param grades ArrayList de notas
+     */
     private static void consultAllGrades(ArrayList<Float> grades) {
         for (int i = 0; i < grades.size(); i++) {
             System.out.println("Nota " + (i + 1) + ": " + grades.get(i));
         }
     }
 
+    /**
+     * Método que comprueba si el valor introducido es un número entero
+     * @param message Mensaje que se muestra al usuario
+     * @param min Valor mínimo
+     * @param max Valor máximo
+     * @return Número entero
+     */
     private static int isInt(String message, int min, int max) {
         Scanner scanner = new Scanner(System.in);
         int number = 0;
@@ -103,6 +133,13 @@ public class ZarceroNicolás_ArrayListNotas {
         return number;
     }
 
+    /**
+     * Método que comprueba si el valor introducido es un número flotante
+     * @param message Mensaje que se muestra al usuario
+     * @param min Valor mínimo
+     * @param max Valor máximo
+     * @return Número flotante
+     */
     private static float isFloat(String message, float min, float max) {
         Scanner scanner = new Scanner(System.in);
         float number = 0;
