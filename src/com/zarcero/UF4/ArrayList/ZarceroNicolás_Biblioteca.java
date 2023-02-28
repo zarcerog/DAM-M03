@@ -1,4 +1,4 @@
-package com.zarcero.UF4;
+package com.zarcero.UF4.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Scanner;
