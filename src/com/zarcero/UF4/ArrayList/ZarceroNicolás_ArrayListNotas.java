@@ -112,7 +112,7 @@ public class ZarceroNicolás_ArrayListNotas {
      */
     private static String isString(String message) {
         Scanner scanner = new Scanner(System.in);
-        String string = "";
+        String string;
 
         System.out.print(message);
         string = scanner.nextLine();
@@ -130,7 +130,7 @@ public class ZarceroNicolás_ArrayListNotas {
     private static int isInt(String message, int min, int max) {
         Scanner scanner = new Scanner(System.in);
         int number = 0;
-        boolean isInt = false;
+        boolean isInt;
 
         do {
             System.out.print(message);
@@ -164,7 +164,7 @@ public class ZarceroNicolás_ArrayListNotas {
     private static float isFloat(String message, float min, float max) {
         Scanner scanner = new Scanner(System.in);
         float number = 0;
-        boolean isFloat = false;
+        boolean isFloat;
 
         do {
             System.out.print(message);
