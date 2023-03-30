@@ -6,6 +6,16 @@ public class Cliente {
     private String email;
     private String telefono;
 
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nombre='" + nombre + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
+                '}';
+    }
+
     public Cliente(String nombre, String direccion, String email, String telefono) {
         this.nombre = nombre;
         this.direccion = direccion;
